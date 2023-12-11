@@ -25,7 +25,11 @@ function App() {
 			/>
 			<main className='container'>
 				<Intro scrollToSignUp={scrollToSignUp} signUpBlock={signUpBlock} />
-				<GetRequest updateTrigger={updateGetRequest} usersBlock={usersBlock} />
+				<GetRequest
+					updateTrigger={updateGetRequest}
+					usersBlock={usersBlock}
+					setUpdateGetRequest={setUpdateGetRequest}
+				/>
 				<PostRequest
 					signUpBlock={signUpBlock}
 					onSuccess={handlePostRequestSuccess}

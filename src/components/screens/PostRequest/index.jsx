@@ -104,7 +104,7 @@ const PostRequest = ({ signUpBlock, onSuccess }) => {
 						type='email'
 						placeholder=' '
 						{...register('email', {
-							required: true,
+							required: 'The email must be a valid email address.',
 							pattern: {
 								value:
 									/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g,

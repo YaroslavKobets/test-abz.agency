@@ -18,7 +18,7 @@ const CardItem = ({ obj }) => {
 	return (
 		<div className={styles.card}>
 			<div className={styles.photo}>
-				<img src={photo} alt='' />
+				<img src={photo} alt={name} />
 			</div>
 			<p title={name}>{name}</p>
 			<div className={styles.info}>
