@@ -14,7 +14,7 @@ const PostRequest = ({ signUpBlock, onSuccess }) => {
 		formState: { errors, isValid },
 		watch,
 		reset,
-	} = useForm({ mode: 'onChange' })
+	} = useForm({ mode: 'onBlur' })
 
 	const [token, setToken] = useState('')
 	const [selectedPosition, setSelectedPosition] = useState('')
