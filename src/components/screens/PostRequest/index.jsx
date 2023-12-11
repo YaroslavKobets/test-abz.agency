@@ -59,6 +59,9 @@ const PostRequest = ({ signUpBlock, onSuccess }) => {
 				setShowSuccessfully(true)
 				onSuccess()
 				reset()
+				setTimeout(() => {
+					setShowSuccessfully(false)
+				}, 5000)
 			}
 		} catch (error) {
 			console.error('Error submitting data:', error.message)
