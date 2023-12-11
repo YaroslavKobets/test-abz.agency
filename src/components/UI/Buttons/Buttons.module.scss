@@ -1,0 +1,21 @@
+@import '../../../assets/styles/variables';
+
+.button {
+	border-radius: 80px;
+	text-align: center;
+	color: $black;
+	background: $buttonBase;
+	transition: all 0.3s ease-in-out 0s;
+	min-width: 100px;
+	padding: 4px 23px;
+	&:disabled {
+		pointer-events: none;
+		background: $buttonDisable;
+		color: $white;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background: $buttonHover;
+		}
+	}
+}

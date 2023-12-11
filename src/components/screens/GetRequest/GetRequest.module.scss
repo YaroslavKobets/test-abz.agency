@@ -1,0 +1,40 @@
+.getRequest {
+	display: flex;
+	flex-direction: column;
+	button {
+		margin: 50px auto 0;
+	}
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+	gap: 29px;
+	@media (max-width: 1199px) {
+		grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+	}
+	@media (max-width: 1023px) {
+		grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+		gap: 16px;
+	}
+	@media (max-width: 767px) {
+		gap: 20px;
+	}
+}
+
+.loading {
+	width: 48px;
+	height: 48px;
+	display: block;
+	margin: 29px auto 0;
+	background-image: url('../../../assets/images/loading.svg');
+	animation: spin 1s linear infinite;
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}

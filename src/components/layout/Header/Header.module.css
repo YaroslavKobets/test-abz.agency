@@ -1,0 +1,21 @@
+.wrapper {
+	background-color: #fff;
+	padding-block: 13px;
+}
+
+.body {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo {
+	margin-right: 14px;
+	img {
+		max-width: 104px;
+	}
+}
+.buttons {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}

@@ -1,0 +1,98 @@
+@import '../../../assets/styles/variables.scss';
+
+.form {
+	width: 100%;
+	max-width: 380px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	gap: 50px;
+	& > div {
+		width: 100%;
+	}
+}
+.inputBlock {
+	position: relative;
+	input {
+		width: 100%;
+		border-radius: 4px;
+		border: 1px solid $lightGrey;
+		padding: 13px 15px;
+		background-color: $background;
+		outline: none;
+		transition: all 0.3s ease-in-out 0s;
+		line-height: 26px;
+		&:focus + label,
+		&:not(:placeholder-shown) + label {
+			top: 0 !important;
+			transform: translateY(-50%);
+			font-size: 12px;
+			line-height: 15px;
+			background-color: $background;
+			padding: 0 4px;
+		}
+	}
+	label {
+		position: absolute;
+		top: 50%;
+		left: 16px;
+		transform: translateY(-50%);
+		pointer-events: none;
+		transition: all 0.3s ease-in-out 0s;
+		color: $grey;
+	}
+}
+
+.errorMessage {
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	color: $red;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: 500;
+}
+
+.fileBlock {
+	position: relative;
+	input {
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+	}
+	label {
+		display: flex;
+		align-items: center;
+		> span {
+			display: block;
+			width: 100%;
+			padding: 13px 15px;
+			border-radius: 0 4px 4px 0;
+			border: 1px solid $lightGrey;
+			border-left: none;
+			color: $grey;
+			span {
+				color: $black;
+			}
+		}
+	}
+	div {
+		border-radius: 4px 0 0 4px;
+		border: 1px solid $black;
+		padding: 13px 15px;
+		cursor: pointer;
+	}
+}
+.errorInput {
+	input,
+	label > div,
+	label > span {
+		border-color: $red !important;
+		box-shadow: 0 0 0 1px $red;
+	}
+	label,
+	label span {
+		color: $red !important;
+	}
+}
